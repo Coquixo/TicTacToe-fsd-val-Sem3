@@ -17,22 +17,46 @@
 </head>
 
 <body>
-    <!--------------------------------------------------Header---------------------------------------------->
-    <div class="container-fluid">
+    <div class="container-fluid ">
+        <!--------------------------------------------------Header---------------------------------------------->
+        <div class="container-fluid ">
 
-        <div class="row text-center ">
+            <div class="row text-center ">
 
-            <p id="header" class="text-warning h1">Tic Tac Toe</p>
+                <p id="header" class="text-warning h1">Tic Tac Toe</p>
+            </div>
+
         </div>
 
-
         <!--------------------------------------------------Main----------------------------------------------->
-        <div id="game">
+
+        <div id="opcionesTop" class=" ">
+            <div class="cointainer-fluid opciones">
+                <div class="row text-center  justify-content-center">
+                    <div class="col-4 border rounded h4">
+                        <p> Home</p>
+                    </div>
+                    <div class="col-4 border rounded h4">
+                        <p> Opciones</p>
+                    </div>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="col-4 border rounded h4">
+                        <p> Fichas restantes J1</p>
+                    </div>
+                    <div class="col-4 border rounded h4">
+                        <p> Fichas restantes J2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------Game----------------------------------------------->
+        <div id="game" class="">
             <div id class="cointainer-fluid text-center ">
-                <!-- V1 -->
+                <!--------------------------------------------------------------------- Vector 1 -------------------------------------------------------------------->
                 <div id="">
                     <div class="row justify-content-center ">
-                        <div class="col-3 p-3 border rounded">
+                        <div id="Box1" class="col-3 p-3 border rounded box-all">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                 class="bi bi-alexa" viewBox="0 0 16 16">
                                 <path
@@ -44,7 +68,7 @@
                                     d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
                             </svg>
                         </div>
-                        <div class="col-3 p-3 border rounded">
+                        <div id="Box2" class="col-3 p-3 border rounded box-all">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                 class="bi bi-alexa" viewBox="0 0 16 16">
                                 <path
@@ -56,7 +80,48 @@
                                     d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
                             </svg>
                         </div>
-                        <div class="col-3 p-3 border rounded">
+                        <div id="Box3" class="col-3 p-3 border rounded box-all">
+                            <svg xmlns="http://www.w3.org/2000/svg " width="32" height="32" fill="currentColor"
+                                class="bi bi-alexa" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!--------------------------------------------------------------------- Vector 2 -------------------------------------------------------------------->
+                    <div class="row justify-content-center">
+
+                        <div id="Box4" class="col-3 p-3 border rounded box-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-alexa" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+                            </svg>
+                        </div>
+                        <div id="Box5" class="col-3 p-3 border border rounded box-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-alexa" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+                            </svg>
+                        </div>
+                        <div id="Box6" class="col-3 p-3 border rounded box-all">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                 class="bi bi-alexa" viewBox="0 0 16 16">
                                 <path
@@ -70,10 +135,9 @@
                         </div>
                     </div>
 
-                    <!-- V2 -->
+                    <!--------------------------------------------------------------------- Vector 3 -------------------------------------------------------------------->
                     <div class="row justify-content-center">
-
-                        <div class="col-3 p-3 border rounded">
+                        <div id="Box7" class="col-3 p-3 border rounded box-all ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                 class="bi bi-alexa" viewBox="0 0 16 16">
                                 <path
@@ -85,7 +149,7 @@
                                     d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
                             </svg>
                         </div>
-                        <div class="col-3 p-3 border border rounded">
+                        <div id="Box8" class="col-3 p-3 border rounded box-all">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                 class="bi bi-alexa" viewBox="0 0 16 16">
                                 <path
@@ -97,47 +161,7 @@
                                     d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
                             </svg>
                         </div>
-                        <div class="col-3 p-3 border rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-alexa" viewBox="0 0 16 16">
-                                <path
-                                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- V3 -->
-                    <div class="row justify-content-center">
-                        <div class="col-3 p-3 border rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-alexa" viewBox="0 0 16 16">
-                                <path
-                                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
-                            </svg>
-                        </div>
-                        <div class="col-3 p-3 border rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-alexa" viewBox="0 0 16 16">
-                                <path
-                                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
-                            </svg>
-                        </div>
-                        <div class="col-3 p-3 border rounded">
+                        <div id="Box9" class="col-3 p-3 border rounded box-all">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                 class="bi bi-alexa" viewBox="0 0 16 16">
                                 <path
@@ -157,6 +181,27 @@
 
 
 
+        </div>
+        <!--------------------------------------------------Opciones----------------------------------------------->
+        <div id="opcionesBot" class="">
+            <div class="cointainer-fluid opciones">
+                <div class="row text-center  justify-content-center">
+                    <div class="col-4 border rounded h4">
+                        <p> Tiempo</p>
+                    </div>
+                    <div class="col-4 border rounded h4">
+                        <p> Opciones</p>
+                    </div>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="col-4 border rounded h4">
+                        <p> Puntuación Jugador 1</p>
+                    </div>
+                    <div class="col-4 border rounded h4">
+                        <p> Puntuación Jugador 2</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

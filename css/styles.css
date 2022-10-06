@@ -9,3 +9,23 @@ body {
     background: rgb(255,0,0);
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 50%, rgba(255,0,0,1) 100%);
 }
+
+.box-all{
+
+    /* width: 12rem;
+    height: 12rem; */
+
+}
+
+.box-all:hover{
+    cursor: pointer;
+
+}
+
+.opciones:hover{
+    cursor: pointer;
+}
+.opciones p{
+
+    color: white;
+}
