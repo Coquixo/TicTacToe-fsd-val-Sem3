@@ -1,32 +1,31 @@
-function Start() {
+class Ficha{
+
+    constructor(tipo){
+        this.tipo = tipo;
+
+    }
+
+    tipo = ["X", "O"];
+    turno 
+   
+    comprobarTurno(){
+
+
+
+    }
+   
+    generarFicha(){
+
+
+
+
+        //place 
+    }
 
 
 }
-
-function NewTable() {
-
-
-
-}
-
-function NameSwap() {
-    // let name = prompt();
-    return name;
-}
-
-function ChooseMode() {
-
-    // humano-humano / humano-cpu / cpu-humano
-}
-
-function ValidPosition() {
-
-
-}
-
 // -------------------------------------------------- Functions----------------------------------------------
 
-NameSwap();
 
 
 function selectWinnerBoxes(b1, b2, b3) {
