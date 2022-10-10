@@ -23,6 +23,11 @@ body {
     cursor: pointer;
 
 }
+.box-all {
+    color: black;
+    height: 6em;
+    width: 6em;
+}
 
 .opciones:hover {
     cursor: pointer;
@@ -33,8 +38,12 @@ body {
     color: firebrick;
 }
 
-.opcionesbot a {
+.opcionesbot a   {
     color: aqua;
+}
+
+.opcionesbot p{
+    color: springgreen;
 }
 
 .opcionesbot a:link {
