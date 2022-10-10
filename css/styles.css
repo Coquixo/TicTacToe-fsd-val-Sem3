@@ -30,7 +30,7 @@ body {
 
 .opcionestop p {
 
-    color: firebrick    ;
+    color: firebrick;
 }
 
 .opcionesbot a {
@@ -55,4 +55,104 @@ body {
 
 #header a:visited {
     text-decoration: none;
+}
+
+/* -----------------
+
+*/
+
+
+
+.cc-window {
+    opacity: 1;
+    transition: opacity 1s ease
+}
+
+.cc-window.cc-invisible {
+    opacity: 0
+}
+
+.cc-animate.cc-revoke {
+    transition: transform 1s ease
+}
+
+
+.cc-animate.cc-revoke.cc-active.cc-bottom,
+.cc-animate.cc-revoke.cc-active.cc-top,
+.cc-revoke:hover {
+    transform: translateY(0)
+}
+
+.cc-grower {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s
+}
+
+.cc-color-override--1680425298.cc-window {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #fff;
+}
+
+.cc-banner.cc-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cc-revoke,
+.cc-window {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    overflow: hidden;
+    padding: 1em 0.3em;
+    position: fixed;
+    text-align: center;
+    z-index: 9999;
+}
+
+.cc-color-override--1680425298 .cc-link,
+.cc-color-override--1680425298 .cc-link:active,
+.cc-color-override--1680425298 .cc-link:visited {
+    color: #fff;
+}
+
+.cc-link,
+.cc-revoke:hover {
+    text-decoration: underline;
+}
+
+.cc-btn {
+    background-color: #ffffff;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    color: #000;
+    display: block;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin: 10px auto 0;
+    max-width: 5em;
+    padding: 0.4em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.cc-btn a:visited {
+    text-decoration: none;
+}
+
+
+.cc-btn,
+.cc-close,
+.cc-link,
+.cc-revoke {
+    cursor: pointer;
+}
+
+/* -------------------------------Elimina la coockie-------------------- */
+.noDisplay {
+    display: none;
 }

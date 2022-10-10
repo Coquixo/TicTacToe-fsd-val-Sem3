@@ -1,25 +1,29 @@
-class Ficha{
+class Ficha {
 
-    constructor(tipo){
+    constructor(tipo = "0") {
         this.tipo = tipo;
 
     }
 
-    tipo = ["X", "O"];
-    turno 
-   
-    comprobarTurno(){
+    tipo = ["X", "O", "0"];
+    
+
+
+
+
+    comprobarTurno() {
 
 
 
     }
-   
-    generarFicha(){
+
+    generarFicha() {
+
+            
 
 
 
-
-        //place 
+        
     }
 
 
@@ -74,3 +78,39 @@ function GetWinner() {
         selectWinnerBoxes(Box3, Box5, Box7);
 
 }
+
+
+
+
+
+
+
+
+// ------------------------------------ Coockie ---------------
+window.addEventListener("load", function () {
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#000000"
+            },
+            "button": {
+                "background": "#ffffff"
+            }
+        },
+        "content": {
+            "message": "Utilizamos cookies propias y de terceros para mejorar nuestros servicios. Si continúa con la navegación, consideraremos que acepta este uso.",
+            "dismiss": "ACEPTAR",
+            "link": "Leer más",
+            "href": "#"
+        }
+    })
+});
+
+const coockie = document.getElementById('coockie');
+
+document.getElementById("aceptar").addEventListener('click', function () {
+
+    coockie.classList.add('noDisplay');
+
+
+})
