@@ -44,6 +44,7 @@ borrador.addEventListener('click', () => {
         limpiar.innerHTML = "";
         ficha1.innerHTML = 6;
         ficha2.innerHTML = 6;
+        contador = 12;
     })
 })
 
