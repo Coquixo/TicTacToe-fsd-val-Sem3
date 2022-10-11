@@ -32,47 +32,45 @@
 
             <!--------------------------------------------------Main----------------------------------------------->
 
-            <div id="opcionesTopId" class=" ">
-                <div class="cointainer-fluid opcionestop">
-
-
-                    <div class="row text-center justify-content-center align-items-center">
-                        <div class="col-3 border rounded ">
-                            <p> Fichas restantes J1</p>
-                        </div>
-                        <div class="col-2 col-sm-2 border text-center rounded mx-2">
-                            <p> Time</p>
-                        </div>
-                        <div class="col-3 border rounded">
-                            <p> Fichas restantes J2</p>
-                        </div>
+            <div id="optTopId" class="cointainer-fluid optTop">
+                <div class="row text-center justify-content-center align-items-center">
+                    <div class="col-3 border rounded ">
+                        <p> Fichas restantes J1</p>
                     </div>
+                    <div class="col-2 col-sm-2 border text-center rounded mx-2">
+                        <p class="turn text-dark">Turno player 1</p>
+                    </div>
+                    <div class="col-3 border rounded">
+                        <p> Fichas restantes J2</p>
+                    </div>
+
                 </div>
             </div>
             <!--------------------------------------------------Game----------------------------------------------->
             <div id="" class="">
+                <!-- <div class="row text-center"><h2 class="turn">askjñd</h2></div> -->
                 <div id class="cointainer-fluid text-center  ">
                     <!--------------------------------------------------------------------- Vector 1 -------------------------------------------------------------------->
                     <div id="game" class="">
                         <div class="row justify-content-center">
-                            <div id="Box1" class="col-3 m-1 border rounded box-all"></div>
-                            <div id="Box2" class="col-3 m-1 border rounded box-all"></div>
-                            <div id="Box3" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box1" cellIndex="0" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box2" cellIndex="1" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box3" cellIndex="2" class="col-3 m-1 border rounded box-all"></div>
                         </div>
 
                         <!--------------------------------------------------------------------- Vector 2 -------------------------------------------------------------------->
                         <div class="row justify-content-center">
 
-                            <div id="Box4" class="col-3 m-1 border rounded box-all"></div>
-                            <div id="Box5" class="col-3 m-1 border rounded box-all"></div>
-                            <div id="Box6" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box4" cellIndex="3" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box5" cellIndex="4" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box6" cellIndex="5" class="col-3 m-1 border rounded box-all"></div>
                         </div>
 
                         <!--------------------------------------------------------------------- Vector 3 -------------------------------------------------------------------->
                         <div class="row justify-content-center">
-                            <div id="Box7" class="col-3 m-1 border rounded box-all"></div>
-                            <div id="Box8" class="col-3 m-1 border rounded box-all"></div>
-                            <div id="Box9" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box7" cellIndex="6" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box8" cellIndex="7" class="col-3 m-1 border rounded box-all"></div>
+                            <div id="Box9" cellIndex="8" class="col-3 m-1 border rounded box-all"></div>
                         </div>
                     </div>
 
@@ -82,26 +80,24 @@
 
 
             </div>
-            <!--------------------------------------------------Opciones----------------------------------------------->
-            <div id="opcionesBot" class="">
-                <div class="cointainer-fluid align-items-center opcionesbot">
+            <!--------------------------------------------------Opts----------------------------------------------->
+            <div id="optBot" class="">
+                <div class="cointainer-fluid align-items-center optBot">
                     <div class="row text-center  justify-content-center">
-                        <div class="col-3 m-1  border rounded">
-                            <p class=""> P1 Score</p>
+                        <div class="col-12 mb-1 ">
+                            <button class="text-danger"> New Game</button>
                         </div>
-                        <div class="col-3 m-1 border rounded ">
-                            <p> P2 Score</p>
-                        </div>
+
                     </div>
                     <div class="row text-center  justify-content-center">
 
-                        <div class="col-6 border rounded">
+                        <div class="col-3 border rounded">
                             <a href="../pages/Settings.html"> Settings</a>
                         </div>
                     </div>
                     <div class="row text-center  justify-content-center">
 
-                        <div class="col-4 m-1   border rounded">
+                        <div class="col-3 m-1   border rounded">
                             <a href="../pages/Scores.html"> Scores</a>
                         </div>
                     </div>

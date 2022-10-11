@@ -6,6 +6,8 @@ body {
 
 }
 
+/*Index Start*/
+
 #intro {
     color: darkred;
 }
@@ -18,41 +20,48 @@ body {
     text-decoration: none;
 }
 
-
+/*Intex End*/
+/*Game Page Start*/
+/*Game Start*/
 .box-all:hover {
     cursor: pointer;
 
 }
+
 .box-all {
     color: black;
     height: 6em;
     width: 6em;
 }
 
-.opciones:hover {
+/*Game End*/
+
+.opts:hover {
     cursor: pointer;
 }
 
-.opcionestop p {
+.optTop {
 
     color: firebrick;
 }
 
-.opcionesbot a   {
+.optBot a {
     color: aqua;
 }
 
-.opcionesbot p{
+.optBot p {
     color: springgreen;
 }
 
-.opcionesbot a:link {
+.optBot a:link {
     text-decoration: none;
 }
 
-.opcionesbot a:visited {
+.optBot a:visited {
     text-decoration: none;
 }
+
+/*Settings Header Start*/
 
 #header a {
     color: black;
@@ -66,17 +75,9 @@ body {
     text-decoration: none;
 }
 
-/* -----------------
+/*Settings Header End*/
 
-*/
-
-.Settings{
-    height: 2em;
-    
-}
-
-
-
+/*Coockies tags Start*/
 .cc-window {
     opacity: 1;
     transition: opacity 1s ease
@@ -158,7 +159,6 @@ body {
     text-decoration: none;
 }
 
-
 .cc-btn,
 .cc-close,
 .cc-link,
@@ -166,7 +166,9 @@ body {
     cursor: pointer;
 }
 
-/* -------------------------------Elimina la coockie-------------------- */
+/* Closes cockie*/
 .noDisplay {
     display: none;
 }
+
+/*Coockies tags Ends/
