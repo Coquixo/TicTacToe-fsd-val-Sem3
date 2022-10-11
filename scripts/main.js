@@ -1,20 +1,53 @@
 // ------------------------------------------------Añadir x u o por turnos
 let casillasColection = document.getElementsByClassName("box-all");
+let borrador = document.getElementById("borrar");
+let turno = document.getElementById("turno");
+const ficha1 = document.getElementById("fichas1");
+const ficha2 = document.getElementById("fichas2");
+
+
+ficha1.innerHTML = 6;
+ficha2.innerHTML = 6;
+turno.innerHTML = 1;
+let contador = 12;
 
 let casillas = Array.from(casillasColection);
-
 let interruptor = true;
 
 casillas.map((casilla, /*index*/) => {
     casilla.addEventListener('click', () => {
-        if (casilla.innerHTML == "") {
-            casilla.innerHTML = (interruptor) ? "X" : "O";
-            interruptor = !interruptor;
+        if (contador != 0) {
+            if (casilla.innerHTML == "") {
+                if (interruptor) {
+                    casilla.innerHTML = "X"
+                    turno.innerHTML = 2;
+                    ficha1.innerHTML--;
+                } else {
+                    casilla.innerHTML = "O";
+                    turno.innerHTML = 1;
+                    ficha2.innerHTML--;
+                }
+                interruptor = !interruptor;
 
+            }
+            contador--;
         }
+
     });
 
 });
+
+// fichaa1.appendChild(fichas1);
+
+borrador.addEventListener('click', () => {
+    casillas.map((limpiar) => {
+        limpiar.innerHTML = "";
+        ficha1.innerHTML = 6;
+        ficha2.innerHTML = 6;
+    })
+})
+
+
 
 // ------------------------------------------------Añadir x u o por turnos end
 // ---------------------------------------------Comprobador win
