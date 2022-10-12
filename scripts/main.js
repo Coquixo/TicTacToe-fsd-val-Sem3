@@ -53,7 +53,7 @@ borrador.addEventListener('click', () => {
         ficha1.innerHTML = 6;
         ficha2.innerHTML = 6;
         contador = 12;
-        turno.innerHTML = 1;
+        turno.innerHTML = "X";
         turnTit.innerHTML = "Player's Turn:";
 
     })
