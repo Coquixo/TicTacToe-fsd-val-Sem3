@@ -78,10 +78,11 @@ borrador.addEventListener('click', () => {
         ficha1.innerHTML = 6;
         ficha2.innerHTML = 6;
         contador = 12;
-        turno.innerHTML = "X";
+        turno.innerHTML =  "X" ;
         turnTit.innerHTML = "Player's Turn:";
 
-        // winner.classList.remove('WinLine') No me borra el BG     
+        limpiar.classList.remove('WinLine'); 
+        turnT.classList.remove('WinLine'); 
 
     })
 })

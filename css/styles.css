@@ -37,7 +37,12 @@ body {
 .WinLine {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 190, 255, 0.6057773451177346) 100%);
-    
+
+}
+
+.WinLine2 {
+    background: rgba(255, 255, 255, 0);
+
 }
 
 .WinLine2 {
