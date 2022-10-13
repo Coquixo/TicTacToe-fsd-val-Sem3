@@ -34,6 +34,16 @@ body {
     width: 6em;
 }
 
+.WinLine {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 190, 255, 0.6057773451177346) 100%);
+    
+}
+
+.WinLine2 {
+    opacity: 0%;
+}
+
 /*Game End*/
 
 .opts:hover {
@@ -172,3 +182,14 @@ body {
 }
 
 /*Coockies tags Ends/
+
+/*cursor*/
+#mouse-circle {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin: -16px 0 0 -16px;
+    border: 1px solid #95ff00;
+    border-radius: 50%;
+    pointer-events: none;
+}

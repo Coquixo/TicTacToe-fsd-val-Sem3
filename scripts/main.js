@@ -12,6 +12,31 @@ let casillas = Array.from(casillasColection);
 let contador = 12;
 let changer = true;
 
+document.addEventListener('DOMContentLoaded', () => {
+    let mousePosX = 0,
+        mousePosY = 0,
+        mouseCircle = document.getElementById('mouse-circle');
+
+    document.onmousemove = (e) => {
+        mousePosX = e.pageX;
+        mousePosY = e.pageY;
+    }
+
+    let delay = 3,
+        revisedMousePosX = 0,
+        revisedMousePosY = 0;
+
+    function delayMouseFollow() {
+        requestAnimationFrame(delayMouseFollow);
+
+        revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+        revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
+
+        mouseCircle.style.top = revisedMousePosY + 'px';
+        mouseCircle.style.left = revisedMousePosX + 'px';
+    }
+    delayMouseFollow();
+});
 
 const mainGame = () => {
     if (Win) {
@@ -56,6 +81,8 @@ borrador.addEventListener('click', () => {
         turno.innerHTML = "X";
         turnTit.innerHTML = "Player's Turn:";
 
+        // winner.classList.remove('WinLine') No me borra el BG     
+
     })
 })
 
@@ -65,10 +92,14 @@ borrador.addEventListener('click', () => {
 // ------------------------------------------------Añadir x u o por turnos end
 // ---------------------------------------------Comprobador win
 
-const selectWinnerBoxes = (winner) => {
+const selectWinnerBoxes = (winner, winner2, winner3) => {
 
     turnTit.innerHTML = winner.innerHTML + " is the winner";
     turno.innerHTML = "Thanks for playing";
+    winner.classList.add('WinLine');
+    winner2.classList.add('WinLine');
+    winner3.classList.add('WinLine');
+    turnT.classList.add('WinLine');
 
 }
 const Win = () => {
