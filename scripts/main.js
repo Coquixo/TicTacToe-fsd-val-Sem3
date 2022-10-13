@@ -12,37 +12,11 @@ let casillas = Array.from(casillasColection);
 let contador = 12;
 let changer = true;
 
-document.addEventListener('DOMContentLoaded', () => {
-    let mousePosX = 0,
-        mousePosY = 0,
-        mouseCircle = document.getElementById('mouse-circle');
-
-    document.onmousemove = (e) => {
-        mousePosX = e.pageX;
-        mousePosY = e.pageY;
-    }
-
-    let delay = 3,
-        revisedMousePosX = 0,
-        revisedMousePosY = 0;
-
-    function delayMouseFollow() {
-        requestAnimationFrame(delayMouseFollow);
-
-        revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
-        revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
-
-        mouseCircle.style.top = revisedMousePosY + 'px';
-        mouseCircle.style.left = revisedMousePosX + 'px';
-    }
-    delayMouseFollow();
-});
-
 const mainGame = () => {
     if (Win) {
         casillas.map((casilla, /*index*/) => {
             casilla.addEventListener('click', () => {
-                if (contador != 0) {
+                if (contador > 6) {
                     if (casilla.innerHTML == "") {
                         if (changer) {
                             casilla.innerHTML = "X"
@@ -52,6 +26,7 @@ const mainGame = () => {
 
                         } else {
                             casilla.innerHTML = "O";
+
                             Win();
                             turno.innerHTML = "X";
                             ficha2.innerHTML--;
@@ -63,6 +38,33 @@ const mainGame = () => {
                         console.log(contador)
 
                     }
+                }
+                else if (contador <= 6 && contador != 0) {
+
+                    if (casilla.innerHTML == "X") {
+
+                        if (casilla.innerHTML = "") {
+                            casilla.innerHTML = "X"
+                            turno.innerHTML = "O"
+                            ficha1.innerHTML--;
+                        }
+
+                    }
+                    else if (casilla.innerHTML == "O") {
+                        if (casilla.innerHTML = "") {
+                            casilla.innerHTML = "O";
+
+                            turno.innerHTML = "X";
+                            ficha2.innerHTML--;
+                        }
+                    }
+                    contador++;
+                    changer = !changer;
+
+                    contador--;
+                    console.log(contador)
+
+
                 }
 
             });
@@ -78,11 +80,13 @@ borrador.addEventListener('click', () => {
         ficha1.innerHTML = 6;
         ficha2.innerHTML = 6;
         contador = 12;
-        turno.innerHTML =  "X" ;
         turnTit.innerHTML = "Player's Turn:";
+        turno.innerHTML = "X";
 
-        limpiar.classList.remove('WinLine'); 
-        turnT.classList.remove('WinLine'); 
+        limpiar.classList.remove('WinLine');
+        turnT.classList.remove('WinLine');
+        turnTit.classList.remove('WinLine');
+        borrador.innerText = "Start New Game"
 
     })
 })
@@ -96,11 +100,15 @@ borrador.addEventListener('click', () => {
 const selectWinnerBoxes = (winner, winner2, winner3) => {
 
     turnTit.innerHTML = winner.innerHTML + " is the winner";
-    turno.innerHTML = "Thanks for playing";
+    turno.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
+    console.log(turno) /*************************************comprobamos que chota está pasando */
     winner.classList.add('WinLine');
     winner2.classList.add('WinLine');
     winner3.classList.add('WinLine');
-    turnT.classList.add('WinLine');
+    turnTit.classList.add('WinLine');
+    changer = !changer;
+
+
 
 }
 const Win = () => {
@@ -146,4 +154,14 @@ const Win = () => {
 
 }
 
-mainGame();
+mainGame()
+
+
+
+
+
+
+// -----------------------try
+
+
+
