@@ -5,6 +5,7 @@ let turno = document.getElementById("turno");
 let turnTit = document.getElementById("turnTit");
 const ficha1 = document.getElementById("fichas1");
 const ficha2 = document.getElementById("fichas2");
+const lastWinner = document.getElementById("lastWinner")
 
 let casillas = casillasColection
 let contador = 12;
@@ -97,8 +98,8 @@ const selectWinnerBoxes = (winner, winner2, winner3) => {
     winner.classList.add('WinLine');
     winner2.classList.add('WinLine');
     winner3.classList.add('WinLine');
-    turnTit.classList.add('WinLine');
     changer = !changer
+    contador = 0;
 }
 
 const Win = () => {

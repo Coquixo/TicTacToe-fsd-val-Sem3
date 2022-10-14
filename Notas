@@ -1,0 +1,11 @@
+En settings:
+Usamos lastWinner como identificador del ultimo que ha gnado en scores:
+    Hay que cambiarlo en Game
+
+
+En game: Hay que cambiar el X is winner por lastWinner is winner
+    Al ganar 3s después la pagina tiene que saltar a scores automaticamente
+
+En todo: Hay que guardar session storage, utilizar Player1 and Player2 y cuardarlo en turno(linea 38 game, cuidado aun no tiene
+ ID).
+ 
