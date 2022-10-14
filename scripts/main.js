@@ -1,30 +1,28 @@
-// ------------------------------------------------Añadir x u o por turnos
-let casillasColection = document.querySelectorAll(".box-all");
-let borrador = document.getElementById("borrar");
-let turno = document.getElementById("turno");
-let turnTit = document.getElementById("turnTit");
-const ficha1 = document.getElementById("fichas1");
-const ficha2 = document.getElementById("fichas2");
-const lastWinner = document.getElementById("lastWinner")
+/*getting inputs for session storage variables START*/
 
-let casillas = casillasColection
+
+/*recuperar datos de session storage y pasarlo a objeto*/
+
+let player1 = sessionStorage.getItem('player1');
+let player2 = sessionStorage.getItem('player2');
+let valueP1 = sessionStorage.getItem('valuePlayer1');
+let valueP2 = sessionStorage.getItem('valuePlayer2');
+
+
+
+let casillas = casillasColection;
 let contador = 12;
 
 let changer = true;
 let borrarFicha = true;
-
-const tablero = [
-    0, 0, 0,
-    0, 0, 0,
-    0, 0, 0,
-]
+// turno.innerHTML = player1;
 
 const borrarFichaHTML = (casilla) => {
     if (changer && casilla.innerHTML === "X") {
-        casilla.innerHTML = ""
+        casilla.innerHTML = "";
         return true
     } else if (!changer && casilla.innerHTML === "O") {
-        casilla.innerHTML = ""
+        casilla.innerHTML = "";
         return true
     }
     return false
@@ -34,14 +32,15 @@ const jugarFicha = (casilla) => {
     if (casilla.innerHTML == "") {
         if (changer) {
             casilla.innerHTML = "X"
-            turno.innerHTML = "O";
+            turno.innerHTML = player2;
             Win();
             ficha1.innerHTML--;
         } else {
             casilla.innerHTML = "O";
-            turno.innerHTML = "X";
+            turno.innerHTML = player1;
             Win();
             ficha2.innerHTML--;
+
         }
         changer = !changer;
 
@@ -70,31 +69,16 @@ const mainGame = () => {
 
 // ------------------------------------Resetear game start
 
-borrador.addEventListener('click', () => {
-    casillas.forEach((casilla) => {
-        casilla.innerHTML = "";
-        ficha1.innerHTML = 6;
-        ficha2.innerHTML = 6;
-        contador = 12;
-        turnTit.innerHTML = "Player's Turn:";
-        turno.innerHTML = "X";
-
-        casilla.classList.remove('WinLine');
-        turnT.classList.remove('WinLine');
-        turnTit.classList.remove('WinLine');
-    })
-})
 
 // ------------------------------------Resetear game end
 
 
-// ------------------------------------------------Añadir x u o por turnos end
+
 // ---------------------------------------------Comprobador win
 
 const selectWinnerBoxes = (winner, winner2, winner3) => {
     turnTit.innerHTML = winner.innerHTML + " is the winner";
     turno.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
-    console.log(turno) /*************************************comprobamos que chota está pasando */
     winner.classList.add('WinLine');
     winner2.classList.add('WinLine');
     winner3.classList.add('WinLine');

@@ -40,46 +40,41 @@
 
     <div class="container">
 
-        <div class="row vh-100 align-items-center text-center ">
+        <div class="row vh-100 align-items-center text-center justify-content-center ">
 
             <div class="row relleno"></div>
             <div class="row relleno"></div>
 
-            <div class="j1name text-danger">Player1 name's: "j1name" </div>
-
-
+            <div class="j1name text-danger">Player1's name: <span id="nameJ1"></span></div>
             <div class="input-group rounded justify-content-center">
-
-                <button class="btn btn-outline-warning text-light" type="button">Submit</button>
-                <input type="text">
+                <input type="text" id="insertName1">
                 <div class="">
                     <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-                        <option selected>Choose...</option>
-                        <option value="1">Player</option>
-                        <option value="2">Cpu</option>
+                        <option selected value="1" id="playerOption1">Player</option>
+                        <option value="2" id="cpuOption1">Cpu</option>
                     </select>
                 </div>
             </div>
-            <div class="j2name text-warning">Player2 name's: "j2name"</div>
+            <div class="j2name text-warning">Player2's name: <span id="nameJ2"><span></div>
             <div class="input-group rounded justify-content-center">
-                <button class="btn btn-outline-warning text-light" type="button">Submit</button>
-                <input type="text">
+                <input type="text" id="insertName2">
                 <div class="row">
                     <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-                        <option selected>Choose...</option>
-                        <option value="1">Player</option>
-                        <option value="2">Cpu</option>
+
+                        <option selected value="1" id="playerOption2">Player</option>
+                        <option value="2" id="cpuOption2">Cpu</option>
                     </select>
                 </div>
             </div>
+            <button id="Submit" class="btn btn-outline-warning text-light col-3" type="button">Submit</button>
             <div class="row relleno"></div>
             <div class="row relleno"></div>
         </div>
     </div>
 
 
-
-<script src="../scripts/mouse.js"></script>
+    <script src="../scripts/storage.js"></script>
+    <script src="../scripts/mouse.js"></script>
     <script src="../scripts/main.js"></script>
 </body>
 
