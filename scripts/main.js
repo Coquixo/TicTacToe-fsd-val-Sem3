@@ -1,93 +1,86 @@
 // ------------------------------------------------Añadir x u o por turnos
-let casillasColection = document.getElementsByClassName("box-all");
+let casillasColection = document.querySelectorAll(".box-all");
 let borrador = document.getElementById("borrar");
 let turno = document.getElementById("turno");
 let turnTit = document.getElementById("turnTit");
 const ficha1 = document.getElementById("fichas1");
 const ficha2 = document.getElementById("fichas2");
 
-let casillas = Array.from(casillasColection);
+let casillas = casillasColection
 let contador = 12;
+
 let changer = true;
+let borrarFicha = true;
 
-const addTokken = () => {
-    
-}
-const mainGame = () => {
-    if (Win) {
-        casillas.map((casilla, /*index*/) => {
-            casilla.addEventListener('click', () => {
+const tablero = [
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+]
 
-                if (contador > 6) {
-                    if (casilla.innerHTML == "") {
-                        if (changer) {
-                            casilla.innerHTML = "X"
-                            Win();
-                            turno.innerHTML = "O";
-                            ficha1.innerHTML--;
-                        } else {
-                            casilla.innerHTML = "O";
-                            Win();
-                            turno.innerHTML = "X";
-                            ficha2.innerHTML--;
-                        }
-                        changer = !changer;
-
-                        contador--;
-                        console.log(contador)
-
-                    }
-                }
-                else if (contador <= 6 && contador != 0) {
-
-                    if (casilla.innerHTML == "X") {
-                        if (casilla.innerHTML = "") {
-                            casilla.innerHTML = "X"
-
-                            ficha1.innerHTML--;
-                            interruptor = !interruptor;
-                            contador++;
-                        }
-                    }
-                    else if (casilla.innerHTML == "O") {
-                        if (casilla.innerHTML = "") {
-                            casilla.innerHTML = "O";
-
-                            ficha2.innerHTML--;
-                            interruptor = !interruptor;
-                            contador++;
-                        }
-                    }
-                    console.log(contador)
-
-                    /* Podemos quitar una ficha sin que afecte, pero no conseguimos lograr colocar otra ficha en su lugar*/
-
-                    changer = !changer;
-
-                }
-
-            });
-
-        });
+const borrarFichaHTML = (casilla) => {
+    if (changer && casilla.innerHTML === "X") {
+        casilla.innerHTML = ""
+        return true
+    } else if (!changer && casilla.innerHTML === "O") {
+        casilla.innerHTML = ""
+        return true
     }
+    return false
+}
+
+const jugarFicha = (casilla) => {
+    if (casilla.innerHTML == "") {
+        if (changer) {
+            casilla.innerHTML = "X"
+            turno.innerHTML = "O";
+            Win();
+            ficha1.innerHTML--;
+        } else {
+            casilla.innerHTML = "O";
+            turno.innerHTML = "X";
+            Win();
+            ficha2.innerHTML--;
+        }
+        changer = !changer;
+
+        contador--;
+        return true
+    }
+    return false
+}
+
+const mainGame = () => {
+    casillas.forEach((casilla, /*index*/) => {
+        casilla.innerHTML = "";
+        casilla.addEventListener('click', () => {
+            if (contador > 6) {
+                jugarFicha(casilla)
+            } else if (contador <= 6 && contador != 0) {
+                if (borrarFicha) {
+                    borrarFicha = !borrarFichaHTML(casilla);
+                } else {
+                    borrarFicha = jugarFicha(casilla)
+                }
+            }
+        });
+    });
 }
 
 // ------------------------------------Resetear game start
 
 borrador.addEventListener('click', () => {
-    casillas.map((limpiar) => {
-        limpiar.innerHTML = "";
+    casillas.forEach((casilla) => {
+        casilla.innerHTML = "";
         ficha1.innerHTML = 6;
         ficha2.innerHTML = 6;
         contador = 12;
         turnTit.innerHTML = "Player's Turn:";
         turno.innerHTML = "X";
 
-        limpiar.classList.remove('WinLine');
+        casilla.classList.remove('WinLine');
         turnT.classList.remove('WinLine');
         turnTit.classList.remove('WinLine');
-        borrador.innerText = "Start New Game"
-
     })
 })
 
@@ -98,7 +91,6 @@ borrador.addEventListener('click', () => {
 // ---------------------------------------------Comprobador win
 
 const selectWinnerBoxes = (winner, winner2, winner3) => {
-
     turnTit.innerHTML = winner.innerHTML + " is the winner";
     turno.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
     console.log(turno) /*************************************comprobamos que chota está pasando */
@@ -106,9 +98,9 @@ const selectWinnerBoxes = (winner, winner2, winner3) => {
     winner2.classList.add('WinLine');
     winner3.classList.add('WinLine');
     turnTit.classList.add('WinLine');
-    changer = !changer;
-
+    changer = !changer
 }
+
 const Win = () => {
 
     let Box1 = document.getElementById("Box1"),
