@@ -1,10 +1,8 @@
 let insertJ1 = document.getElementById('insertName1');
 let insertJ2 = document.getElementById('insertName2');
 const submit = document.getElementById('Submit')
-const playerOption1 = document.getElementById('playerOption1')
-const cpuOption1 = document.getElementById('cpuOption1')
-const playerOption2 = document.getElementById('playerOption2')
-const cpuOption2 = document.getElementById('cpuOption2')
+let playerValue1 = document.getElementById('playerValue1')
+let playerValue2 = document.getElementById('playerValue2')
 
 
 
@@ -13,12 +11,13 @@ const cpuOption2 = document.getElementById('cpuOption2')
 submit.addEventListener('click', () => {
     const user1 = {
         name: insertJ1.value,
-        value: playerOption1.value
+        value: playerValue1.value
     }
     const user2 = {
         name: insertJ2.value,
-        value: playerOption2.value
+        value: playerValue2.value
     }
+
 
 
     sessionStorage.setItem('player1', JSON.stringify(user1));

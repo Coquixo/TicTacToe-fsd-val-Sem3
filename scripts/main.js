@@ -5,10 +5,13 @@ let valueP2 = sessionStorage.getItem('valuePlayer2');
 
 let casillas = casillasColection;
 let contador = 12;
-
 let changer = true;
+let starter = true;
 let borrarFicha = true;
 turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
+let p1 = JSON.parse(sessionStorage.getItem('player1')).value
+let p2 = JSON.parse(sessionStorage.getItem('player2')).value
+
 
 const borrarFichaHTML = (casilla) => {
     if (changer && casilla.innerHTML === "X") {
@@ -43,14 +46,41 @@ const jugarFicha = (casilla) => {
     return false
 }
 
+const getRandomCasilla = () => {
+    const random = Math.round(Math.random() * 8)
+    return casillas[random]
+}
+
+const cpu = () => {
+    if (contador > 6) {
+        let fichaIsPlayed = jugarFicha(getRandomCasilla())
+        while (!fichaIsPlayed) {
+            fichaIsPlayed = jugarFicha(getRandomCasilla())
+        }
+    } else if (contador <= 6 && contador != 0) {
+        let fichaIsPlayed = borrarFichaHTML(getRandomCasilla())
+        while (!fichaIsPlayed) {
+            fichaIsPlayed = borrarFichaHTML(getRandomCasilla())
+        }
+        fichaIsPlayed = jugarFicha(getRandomCasilla())
+        while (!fichaIsPlayed) {
+            fichaIsPlayed = jugarFicha(getRandomCasilla())
+        }
+    }
+}
+
+const isBotTurn = () => {
+    return (p1 == 2 && changer) || (p2 == 2 && !changer)
+}
+
 const mainGame = () => {
     casillas.forEach((casilla) => {
         casilla.innerHTML = "";
         casilla.addEventListener('click', () => {
             if (Win()) {
                 eraseTable();
-            }
-            else if (contador > 6) {
+
+            } else if (contador > 6) {
                 jugarFicha(casilla)
             } else if (contador <= 6 && contador != 0) {
                 if (borrarFicha) {
@@ -59,25 +89,36 @@ const mainGame = () => {
                     borrarFicha = jugarFicha(casilla)
                 }
             }
+            if (isBotTurn() && !Win()) {
+                cpu()
+            }
         });
     });
+
+    if (isBotTurn()) {
+        cpu()
+    }
 }
 
 // ------------------------------------Resetear game start
 const eraseTable = () => {
     casillas.forEach((casilla) => {
         casilla.innerHTML = "";
-        ficha1.innerHTML = 6;
-        ficha2.innerHTML = 6;
-        contador = 12;
-        turnTit.innerHTML = "Turn:";
-        turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name;
-        changer = !changer
         casilla.classList.remove('WinLine');
-        turnT.classList.remove('WinLine');
-        turnTit.classList.remove('WinLine');
-
     })
+    ficha1.innerHTML = 6;
+    ficha2.innerHTML = 6;
+    contador = 12;
+    turnTit.innerHTML = "Turn:";
+    starter = !starter
+    changer = starter
+    const starterPlayerName = starter ? sessionStorage.getItem('player1') : sessionStorage.getItem('player2')
+    turnPlayer.innerHTML = JSON.parse(starterPlayerName).name;
+    turnT.classList.remove('WinLine');
+    turnTit.classList.remove('WinLine');
+    if (isBotTurn()) {
+        cpu()
+    }
 }
 borrador.addEventListener('click', eraseTable)
 
@@ -92,13 +133,13 @@ const selectWinnerBoxes = (winner, winner2, winner3) => {
 
     if (winner.innerHTML == "X") {
         turnTit.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name + " is the winner";
-        sessionStorage.setItem('winner',JSON.parse(sessionStorage.getItem('player1')).name)
-        
+        sessionStorage.setItem('winner', JSON.parse(sessionStorage.getItem('player1')).name)
+
     } else if (winner.innerHTML == "O") {
         turnTit.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name + " is the winner";
-        sessionStorage.setItem('winner',JSON.parse(sessionStorage.getItem('player2')).name)
+        sessionStorage.setItem('winner', JSON.parse(sessionStorage.getItem('player2')).name)
     }
-    turnPlayer.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
+    turnPlayer.innerHTML = "Thanks for playing";
     winner.classList.add('WinLine');
     winner2.classList.add('WinLine');
     winner3.classList.add('WinLine');
