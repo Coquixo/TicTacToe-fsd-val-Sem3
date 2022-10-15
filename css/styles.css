@@ -37,8 +37,8 @@ body {
 .WinLine {
     background-color: #fff;
     background-image:
-    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-    linear-gradient(#eee .1em, transparent .1em);
+        linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.2em;
     color: #000 !important;
 
@@ -158,6 +158,31 @@ body {
     text-decoration: underline;
 }
 
+
+@keyframes hor-movement {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: 80%;
+    }
+}
+
+@keyframes ver-movement {
+    from {
+        margin-top: 0%;
+    }
+
+    to {
+        margin-top: 100%;
+    }
+}
+
+#scores{
+    height: 80vh;
+}
+
 .cc-btn {
     background-color: #ffffff;
     border-color: transparent;
@@ -198,7 +223,7 @@ body {
     width: 32px;
     height: 32px;
     margin: -16px 0 0 -16px;
-    border: 1px solid #7e03d0;
+    border: 2px solid #7e03d0;
     border-radius: 50%;
     pointer-events: none;
 }

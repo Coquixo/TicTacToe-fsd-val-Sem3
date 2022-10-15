@@ -8,8 +8,7 @@ const cpuOption2 = document.getElementById('cpuOption2')
 
 
 
-nameJ1.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
-nameJ2.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name
+
 
 submit.addEventListener('click', () => {
     const user1 = {
@@ -24,6 +23,8 @@ submit.addEventListener('click', () => {
 
     sessionStorage.setItem('player1', JSON.stringify(user1));
     sessionStorage.setItem('player2', JSON.stringify(user2));
+    sessionStorage.setItem('winner', "NoOne");
+
 
 
     /*guardamos los datos en session storage end*/
@@ -36,3 +37,5 @@ submit.addEventListener('click', () => {
     insertJ2.value = ""
 
 })
+nameJ1.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
+nameJ2.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name
