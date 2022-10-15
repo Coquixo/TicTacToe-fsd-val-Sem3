@@ -75,7 +75,7 @@ const eraseTable = () => {
         casilla.classList.remove('WinLine');
         turnT.classList.remove('WinLine');
         turnTit.classList.remove('WinLine');
-
+        changer = !changer
 
     })
 }
@@ -89,7 +89,6 @@ borrador.addEventListener('click', eraseTable)
 // ---------------------------------------------Comprobador win
 
 const selectWinnerBoxes = (winner, winner2, winner3) => {
-    
 
     turnTit.innerHTML = winner.innerHTML + " is the winner";
     turnPlayer.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
@@ -98,7 +97,7 @@ const selectWinnerBoxes = (winner, winner2, winner3) => {
     winner3.classList.add('WinLine');
     changer = !changer
     contador = 0;
-    
+
 }
 
 const Win = () => {
