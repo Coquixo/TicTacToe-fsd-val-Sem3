@@ -72,10 +72,10 @@ const eraseTable = () => {
         contador = 12;
         turnTit.innerHTML = "Turn:";
         turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name;
+        changer = !changer
         casilla.classList.remove('WinLine');
         turnT.classList.remove('WinLine');
         turnTit.classList.remove('WinLine');
-        changer = !changer
 
     })
 }
@@ -90,7 +90,11 @@ borrador.addEventListener('click', eraseTable)
 
 const selectWinnerBoxes = (winner, winner2, winner3) => {
 
-    turnTit.innerHTML = winner.innerHTML + " is the winner";
+    if (winner.innerHTML == "X") {
+        turnTit.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name + " is the winner";
+    } else if (winner.innerHTML == "O") {
+        turnTit.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name + " is the winner";
+    }
     turnPlayer.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
     winner.classList.add('WinLine');
     winner2.classList.add('WinLine');
