@@ -92,14 +92,17 @@ const selectWinnerBoxes = (winner, winner2, winner3) => {
 
     if (winner.innerHTML == "X") {
         turnTit.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name + " is the winner";
+        sessionStorage.setItem('winner',JSON.parse(sessionStorage.getItem('player1')).name)
+        
     } else if (winner.innerHTML == "O") {
         turnTit.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name + " is the winner";
+        sessionStorage.setItem('winner',JSON.parse(sessionStorage.getItem('player2')).name)
     }
     turnPlayer.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
     winner.classList.add('WinLine');
     winner2.classList.add('WinLine');
     winner3.classList.add('WinLine');
-    changer = !changer
+    // changer = !changer
     contador = 0;
 
 }

@@ -8,8 +8,8 @@ const cpuOption2 = document.getElementById('cpuOption2')
 
 
 
-nameJ1.innerHTML = sessionStorage.getItem('player1');
-nameJ2.innerHTML = sessionStorage.getItem('player2');
+nameJ1.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
+nameJ2.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name
 
 submit.addEventListener('click', () => {
     const user1 = {
