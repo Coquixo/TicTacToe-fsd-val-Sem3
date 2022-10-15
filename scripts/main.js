@@ -8,7 +8,7 @@ let contador = 12;
 
 let changer = true;
 let borrarFicha = true;
-turnPlayer.innerHTML = sessionStorage.getItem('player1');
+turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
 
 const borrarFichaHTML = (casilla) => {
     if (changer && casilla.innerHTML === "X") {
@@ -25,12 +25,12 @@ const jugarFicha = (casilla) => {
     if (casilla.innerHTML == "") {
         if (changer) {
             casilla.innerHTML = "X"
-            turnPlayer.innerHTML = sessionStorage.getItem('player2');;
+            turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name;
             Win();
             ficha1.innerHTML--;
         } else {
             casilla.innerHTML = "O";
-            turnPlayer.innerHTML = sessionStorage.getItem('player1');;
+            turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name;
             Win();
             ficha2.innerHTML--;
 
@@ -71,7 +71,7 @@ const eraseTable = () => {
         ficha2.innerHTML = 6;
         contador = 12;
         turnTit.innerHTML = "Turn:";
-        turnPlayer.innerHTML = sessionStorage.getItem('player1');;
+        turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name;
         casilla.classList.remove('WinLine');
         turnT.classList.remove('WinLine');
         turnTit.classList.remove('WinLine');
@@ -89,7 +89,8 @@ borrador.addEventListener('click', eraseTable)
 // ---------------------------------------------Comprobador win
 
 const selectWinnerBoxes = (winner, winner2, winner3) => {
-    sessionStorage.setItem('winner',turnPlayer.value) /*aqui me quedao*/
+    
+
     turnTit.innerHTML = winner.innerHTML + " is the winner";
     turnPlayer.innerHTML = "Thanks for playing";  /******************************************************No me aparece en  el juego idk why */
     winner.classList.add('WinLine');
