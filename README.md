@@ -27,16 +27,18 @@ First page is an introduction to our game, press Start Game to get into the tabb
 ***
 ## Demo
 Computer View:
-![img](../TikTakToe-fsd-val-Sem3/imgs/1.PNG)
-![img](../TikTakToe-fsd-val-Sem3/imgs/2.PNG)
-![img](../TikTakToe-fsd-val-Sem3/imgs/3.PNG)
-![img](../TikTakToe-fsd-val-Sem3/imgs/4.PNG)
+![img](/imgs/1.PNG)
+![img](/imgs/2.PNG)
+![img](/imgs/3.PNG)
+![img](/imgs/4.PNG)
+
 
 Responsive Device View (Nexus5)
-![img](../TikTakToe-fsd-val-Sem3/imgs/1m.PNG)
-![img](../TikTakToe-fsd-val-Sem3/imgs/2m.PNG)
-![img](../TikTakToe-fsd-val-Sem3/imgs/3m.PNG)
-![img](../TikTakToe-fsd-val-Sem3/imgs/4m.PNG)
+![img](/imgs/1m.PNG)
+![img](/imgs/2m.PNG)
+![img](/imgs/3m.PNG)
+![img](/imgs/4m.PNG)
+
 
 
 
