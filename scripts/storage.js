@@ -3,12 +3,14 @@ let insertJ2 = document.getElementById('insertName2');
 const submit = document.getElementById('Submit')
 let playerValue1 = document.getElementById('playerValue1')
 let playerValue2 = document.getElementById('playerValue2')
-
+let xo = document.getElementById('xo')
+xo.classList.remove('xo')
 
 
 
 
 submit.addEventListener('click', () => {
+    
     const user1 = {
         name: insertJ1.value,
         value: playerValue1.value
@@ -34,7 +36,9 @@ submit.addEventListener('click', () => {
 
     insertJ1.value = ""
     insertJ2.value = ""
-
+    xo.classList.add('xo')
+    
+   
 })
 nameJ1.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
 nameJ2.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name

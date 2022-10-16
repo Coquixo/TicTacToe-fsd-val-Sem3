@@ -30,8 +30,12 @@ body {
 
 .box-all {
     color: black;
-    height: 6em;
-    width: 6em;
+    height: 5em;
+    width: 5em;
+}
+
+.xo{
+    color: red !important;
 }
 
 .WinLine {

@@ -18,107 +18,109 @@
 
 <body>
 
-
     <div class="container vh-100">
-        <div class="row vh-100 align-items-center">
-            <!--------------------------------------------------Header---------------------------------------------->
-            <div class="container-fluid ">
+        <div class="container vh-100">
+            <div class="row vh-100 align-items-center">
+                <!--------------------------------------------------Header---------------------------------------------->
+                <div class="container-fluid ">
 
-                <div class="row text-center">
+                    <div class="row text-center">
 
-                    <p id="intro" class=" h1">Tic Tac Toe</p>
-                </div>
-
-            </div>
-
-            <!--------------------------------------------------Main----------------------------------------------->
-
-            <div id="optTopId" class="cointainer-fluid optTop">
-                <div class="row text-center justify-content-center align-items-center">
-                    <div class="col-3 border rounded  ">
-                        <p> P1 Tokkens <br><span id="fichas1">6</span></p>
-                    </div>
-                    <div id="turnT" class="col-5 col-sm-2 border text-center rounded mx-2">
-                        <p><span id="turnTit">Turn:</span><br> <span id="turnPlayer"></span></p>
-                    </div>
-                    <div class="col-3 border rounded">
-                        <p>P2 Tokkens <br><span id="fichas2">6</span></p>
-                    </div>
-
-                </div>
-            </div>
-            <!--------------------------------------------------Game----------------------------------------------->
-            <div id="mouse-circle" class=""></div>
-            <div id="" class="">
-                <div id class="cointainer-fluid text-center  ">
-                    <!--------------------------------------------------------------------- Vector 1 -------------------------------------------------------------------->
-                    <div id="game" class="pt-4">
-                        <div class="row justify-content-center text-light">
-                            <div id="Box1" cellIndex="0"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                            <div id="Box2" cellIndex="1"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                            <div id="Box3" cellIndex="2"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                        </div>
-
-                        <!--------------------------------------------------------------------- Vector 2 -------------------------------------------------------------------->
-                        <div class="row justify-content-center">
-
-                            <div id="Box4" cellIndex="3"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                            <div id="Box5" cellIndex="4"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                            <div id="Box6" cellIndex="5"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                        </div>
-
-                        <!--------------------------------------------------------------------- Vector 3 -------------------------------------------------------------------->
-                        <div class="row justify-content-center">
-                            <div id="Box7" cellIndex="6"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                            <div id="Box8" cellIndex="7"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                            <div id="Box9" cellIndex="8"
-                                class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
-                            </div>
-                        </div>
+                        <p id="intro" class=" h1">Tic Tac Toe</p>
                     </div>
 
                 </div>
 
+                <!--------------------------------------------------Main----------------------------------------------->
 
-
-
-            </div>
-            <!--------------------------------------------------Opts----------------------------------------------->
-            <div id="optBot" class="">
-                <div class="cointainer-fluid align-items-center optBot">
-                    <div class="row text-center  justify-content-center ">
-                        <div class="col-4 border rounded-pill align-items-center d-flex justify-content-center ms-1">
-                            <a href="../pages/Settings.html"> Settings</a>
+                <div id="optTopId" class="cointainer-fluid optTop">
+                    <div class="row text-center justify-content-center align-items-center">
+                        <div class="col-3 border rounded  ">
+                            <p> P1 Tokkens <br><span id="fichas1">6</span></p>
                         </div>
-                        <div class="col">
-                            <button id="borrar" class="text-danger col-10 rounded-pill " > New Game</button>
+                        <div id="turnT" class="col-5 col-sm-2 border text-center rounded mx-2">
+                            <p><span id="turnTit">Turn:</span><br> <span id="turnPlayer"></span></p>
+                        </div>
+                        <div class="col-3 border rounded">
+                            <p>P2 Tokkens <br><span id="fichas2">6</span></p>
                         </div>
 
-                        <div class="col-4 border rounded-pill align-items-center d-flex justify-content-center me-1">
-                            <a href="../pages/Scores.html"> Scores</a>
+                    </div>
+                </div>
+                <!--------------------------------------------------Game----------------------------------------------->
+                <div id="mouse-circle"></div>
+                <div>
+                    <div id class="cointainer-fluid text-center">
+                        <!--------------------------------------------------------------------- Vector 1 -------------------------------------------------------------------->
+                        <div id="game">
+                            <div class="row justify-content-center text-light">
+                                <div id="Box1" cellIndex="0"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                                <div id="Box2" cellIndex="1"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                                <div id="Box3" cellIndex="2"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                            </div>
+
+                            <!--------------------------------------------------------------------- Vector 2 -------------------------------------------------------------------->
+                            <div class="row justify-content-center">
+
+                                <div id="Box4" cellIndex="3"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                                <div id="Box5" cellIndex="4"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                                <div id="Box6" cellIndex="5"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                            </div>
+
+                            <!--------------------------------------------------------------------- Vector 3 -------------------------------------------------------------------->
+                            <div class="row justify-content-center">
+                                <div id="Box7" cellIndex="6"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                                <div id="Box8" cellIndex="7"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                                <div id="Box9" cellIndex="8"
+                                    class="col-3 m-1 border rounded box-all d-flex align-items-center justify-content-center text-light">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+                <!--------------------------------------------------Opts----------------------------------------------->
+                <div id="optBot" class="">
+                    <div class="cointainer-fluid align-items-center optBot">
+                        <div class="row text-center  justify-content-center ">
+                            <div
+                                class="col-4 border rounded-pill align-items-center d-flex justify-content-center ms-1">
+                                <a href="../pages/Settings.html"> Settings</a>
+                            </div>
+                            <div class="col-3">
+                                <button id="borrar" class="text-danger rounded-pill "> New Game</button>
+                            </div>
+
+                            <div
+                                class="col-4 border rounded-pill align-items-center d-flex justify-content-center me-1">
+                                <a href="../pages/Scores.html"> Scores</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-
 
     </div>
     <script src="../scripts/mouse.js"></script>
