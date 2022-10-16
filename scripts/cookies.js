@@ -1,7 +1,5 @@
 window.addEventListener("load", function () {
-
 });
-
 
 const coockie = document.getElementById('coockie');
 console.log(coockie)

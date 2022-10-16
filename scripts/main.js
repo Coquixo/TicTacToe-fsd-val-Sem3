@@ -1,8 +1,6 @@
 let valueP1 = sessionStorage.getItem('valuePlayer1');
 let valueP2 = sessionStorage.getItem('valuePlayer2');
 
-
-
 let casillas = casillasColection;
 let contador = 12;
 let changer = true;
@@ -11,7 +9,6 @@ let borrarFicha = true;
 turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
 let p1 = JSON.parse(sessionStorage.getItem('player1')).value
 let p2 = JSON.parse(sessionStorage.getItem('player2')).value
-
 
 const borrarFichaHTML = (casilla) => {
     if (changer && casilla.innerHTML === "X") {
@@ -143,9 +140,7 @@ const selectWinnerBoxes = (winner, winner2, winner3) => {
     winner.classList.add('WinLine');
     winner2.classList.add('WinLine');
     winner3.classList.add('WinLine');
-    // changer = !changer
     contador = 0;
-
 }
 
 const Win = () => {

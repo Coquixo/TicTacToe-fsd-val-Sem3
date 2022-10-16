@@ -6,9 +6,6 @@ let playerValue2 = document.getElementById('playerValue2')
 let xo = document.getElementById('xo')
 xo.classList.remove('xo')
 
-
-
-
 submit.addEventListener('click', () => {
     
     const user1 = {
@@ -20,24 +17,16 @@ submit.addEventListener('click', () => {
         value: playerValue2.value
     }
 
-
-
     sessionStorage.setItem('player1', JSON.stringify(user1));
     sessionStorage.setItem('player2', JSON.stringify(user2));
     sessionStorage.setItem('winner', "NoOne");
 
-
-
-    /*guardamos los datos en session storage end*/
-
     nameJ1.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
     nameJ2.innerHTML = JSON.parse(sessionStorage.getItem('player2')).name
 
-
     insertJ1.value = ""
     insertJ2.value = ""
-    xo.classList.add('xo')
-    
+    xo.classList.add('xo') 
    
 })
 nameJ1.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
