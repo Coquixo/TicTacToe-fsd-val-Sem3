@@ -1,14 +1,14 @@
 let valueP1 = sessionStorage.getItem('valuePlayer1');
 let valueP2 = sessionStorage.getItem('valuePlayer2');
-
-let casillas = casillasColection;
-let contador = 12;
-let changer = true;
-let starter = true;
-let borrarFicha = true;
-turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
 let p1 = JSON.parse(sessionStorage.getItem('player1')).value
 let p2 = JSON.parse(sessionStorage.getItem('player2')).value
+let casillas = casillasColection;
+turnPlayer.innerHTML = JSON.parse(sessionStorage.getItem('player1')).name
+
+let changer = true;
+let starter = true;
+let contador = 12;
+let borrarFicha = true;
 
 const borrarFichaHTML = (casilla) => {
     if (changer && casilla.innerHTML === "X") {
@@ -97,7 +97,6 @@ const mainGame = () => {
     }
 }
 
-// ------------------------------------Resetear game start
 const eraseTable = () => {
     casillas.forEach((casilla) => {
         casilla.innerHTML = "";
@@ -118,13 +117,6 @@ const eraseTable = () => {
     }
 }
 borrador.addEventListener('click', eraseTable)
-
-
-// ------------------------------------Resetear game end
-
-
-
-// ---------------------------------------------Comprobador win
 
 const selectWinnerBoxes = (winner, winner2, winner3) => {
 

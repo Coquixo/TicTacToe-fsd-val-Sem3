@@ -5,11 +5,8 @@ body {
 
 }
 
-/*Index Start*/
-
 #intro {
     color: darkred;
-
 }
 
 #intro:visited {
@@ -20,12 +17,8 @@ body {
     text-decoration: none;
 }
 
-/*Intex End*/
-/*Game Page Start*/
-/*Game Start*/
 .box-all:hover {
     cursor: pointer;
-
 }
 
 .box-all {
@@ -34,7 +27,7 @@ body {
     width: 5em;
 }
 
-.xo{
+.xo {
     color: red !important;
 }
 
@@ -45,19 +38,15 @@ body {
         linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.2em;
     color: #000 !important;
-
 }
 
 .WinLine2 {
     background: rgba(255, 255, 255, 0);
-
 }
 
 .WinLine2 {
     opacity: 0%;
 }
-
-/*Game End*/
 
 .opts:hover {
     cursor: pointer;
@@ -84,8 +73,6 @@ body {
     text-decoration: none;
 }
 
-/*Settings Header Start*/
-
 #header a {
     color: black;
 }
@@ -98,9 +85,6 @@ body {
     text-decoration: none;
 }
 
-/*Settings Header End*/
-
-/*Coockies tags Start*/
 .cc-window {
     opacity: 1;
     transition: opacity 1s ease
@@ -113,7 +97,6 @@ body {
 .cc-animate.cc-revoke {
     transition: transform 1s ease
 }
-
 
 .cc-animate.cc-revoke.cc-active.cc-bottom,
 .cc-animate.cc-revoke.cc-active.cc-top,
@@ -162,28 +145,7 @@ body {
     text-decoration: underline;
 }
 
-
-@keyframes hor-movement {
-    from {
-        margin-left: 0%;
-    }
-
-    to {
-        margin-left: 80%;
-    }
-}
-
-@keyframes ver-movement {
-    from {
-        margin-top: 0%;
-    }
-
-    to {
-        margin-top: 100%;
-    }
-}
-
-#scores{
+#scores {
     height: 80vh;
 }
 
@@ -214,14 +176,10 @@ body {
     cursor: pointer;
 }
 
-/* Closes cockie*/
 .noDisplay {
     display: none;
 }
 
-/*Coockies tags Ends/
-
-/*cursor*/
 #mouse-circle {
     position: absolute;
     width: 32px;
